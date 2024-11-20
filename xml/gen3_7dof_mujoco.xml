@@ -26,6 +26,7 @@
     <mesh name="bracelet_no_vision_link" file="bracelet_no_vision_link.STL" />
     <mesh name="adapter" file="adapter.STL" scale="0.001 0.001 0.001" />
     <mesh name="mounting" file="mounting.STL" />
+    <mesh name="DS4_Adapter" file="DS4_Adapter.STL" />
     <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512"
       height="3072" />
   </asset>
@@ -98,6 +99,11 @@
                               quat="-0.000991824 0.707107 -0.000988236 0.707105" mass="0.081117"
                               diaginertia="4.00481e-05 2.22149e-05 2.1858e-05" />
                             <site name="ee_force" size="0.01" pos="0.0 0.0 0.0" />
+                            <body name="DS4_Adapter" pos="0.0 0.0 0.03">
+                              <geom type="box" size="0.03 0.03 0.03" />
+                              <inertial pos="0.03 0.03 0.03" diaginertia="0.0012 0.0012 0.0012"
+                                mass="0.5" />
+                            </body>
                           </body>
                         </body>
                       </body>
