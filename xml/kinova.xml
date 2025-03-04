@@ -99,10 +99,10 @@
                               quat="-0.000991824 0.707107 -0.000988236 0.707105" mass="0.081117"
                               diaginertia="4.00481e-05 2.22149e-05 2.1858e-05" />
                             <site name="ee_force" size="0.01" pos="0.0 0.0 0.0" />
-                            <body name="DS4_Adapter" pos="0.0 0.0 0.03">
-                              <geom type="box" size="0.03 0.03 0.03" />
-                              <inertial pos="0.03 0.03 0.03" diaginertia="0.0012 0.0012 0.0012"
-                                mass="0.5" />
+                            <body name="DS4_Adapter" pos="0.0 0.0 0.00">
+                              <geom type="box" size="0.02 0.02 0.03" />
+                              <inertial pos="0.0 0.0 0.04" diaginertia="0.0012 0.0012 0.0012"
+                                mass="0.35" />
                             </body>
                           </body>
                         </body>
