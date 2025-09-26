@@ -99,9 +99,12 @@
                               quat="-0.000991824 0.707107 -0.000988236 0.707105" mass="0.081117"
                               diaginertia="4.00481e-05 2.22149e-05 2.1858e-05" />
                             <site name="ee_force" size="0.01" pos="0.0 0.0 0.0" />
-                            <body name="DS4_Adapter" pos="0.0 0.0 0.00">
-                              <geom type="cylinder" pos="0.0 0.0 0.01" size="0.06 0.01" mass="1.25" />
-                            </body>
+                          </body>
+                          <body name="FT_sensor_imu" pos="0.0 0.0 0.0093">
+                            <inertial pos="-7.28164825396643e-05 1.54951151759942e-05 -0.00279059266096084"
+                              quat="-0.000991824 0.707107 -0.000988236 0.707105" mass="0.00841533584597687"
+                              diaginertia="8.74962095262403e-07 4.41035649008913e-07 4.36835040253875e-07" />
+                            <site name="imu" size="0.01" pos="0.0 0.0 0.0" />
                           </body>
                         </body>
                       </body>
@@ -129,6 +132,8 @@
   <sensor>
     <force name="EEForceSensor_fsensor" site="ee_force" />
     <torque name="EEForceSensor_tsensor" site="ee_force" />
+    <accelerometer name="Accelerometer_accelerometer" site="imu" />
+    <gyro name="Accelerometer_gyro" site="imu" /> 
   </sensor>
 
 </mujoco>
