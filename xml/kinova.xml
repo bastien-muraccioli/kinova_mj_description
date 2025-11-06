@@ -24,9 +24,6 @@
     <mesh name="spherical_wrist_1_link" file="spherical_wrist_1_link.STL" />
     <mesh name="spherical_wrist_2_link" file="spherical_wrist_2_link.STL" />
     <mesh name="bracelet_no_vision_link" file="bracelet_no_vision_link.STL" />
-    <mesh name="adapter" file="adapter.STL" scale="0.001 0.001 0.001" />
-    <mesh name="mounting" file="mounting.STL" />
-    <mesh name="DS4_Adapter" file="DS4_Adapter.STL" />
     <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512"
       height="3072" />
   </asset>
@@ -83,36 +80,6 @@
                     <joint class="infiniteJoints" name="joint_7" armature="0.015" />
                     <geom mesh="bracelet_no_vision_link" />
                     <body name="end_effector_link" pos="0 0 -0.061525" quat="0 1 0 0">
-                      <body name="FT_adapter" pos="0 0 0.03" quat="1 0 0 0" gravcomp="0">
-                        <inertial pos="0.00132983 0.000509434 0.0172976"
-                          quat="0.0151383 0.724289 0.0089842 0.689272" mass="0.12"
-                          diaginertia="8.83157e-05 5.69452e-05 5.39501e-05" />
-                        <geom mesh="adapter" />
-                        <body name="FT_sensor_mounting" pos="0 0 0"
-                          gravcomp="0">
-                          <inertial pos="-6.16916e-05 0.000454732 0.0160471"
-                            quat="0.00666999 0.705455 0.0029597 0.708717" mass="0.14931"
-                            diaginertia="0.00013064 9.55556e-05 8.85449e-05" />
-                          <geom mesh="mounting" />
-                          <body name="FT_sensor_wrench" pos="0.0 0.0 0.035">
-                            <inertial pos="-1.9753e-07 0.00017443 -0.0070758"
-                              quat="-0.000991824 0.707107 -0.000988236 0.707105" mass="0.081117"
-                              diaginertia="4.00481e-05 2.22149e-05 2.1858e-05" />
-                            <site name="ee_force" size="0.01" pos="0.0 0.0 0.0" />
-                            <body name="DS4_Adapter" pos="0.0 0.0 0.00">
-                              <geom type="box" size="0.02 0.02 0.03" />
-                              <inertial pos="0.0 0.0 0.04" diaginertia="0.0012 0.0012 0.0012"
-                                mass="0.35" />
-                            </body>
-                            <body name="FT_sensor_imu" pos="0.0 0.0 0.0093">
-                              <inertial pos="-7.28164825396643e-05 1.54951151759942e-05 -0.00279059266096084"
-                                quat="-0.000991824 0.707107 -0.000988236 0.707105" mass="0.00841533584597687"
-                                diaginertia="8.74962095262403e-07 4.41035649008913e-07 4.36835040253875e-07" />
-                              <site name="imu" size="0.01" pos="0.0 0.0 0.0" />
-                            </body>
-                          </body>
-                        </body>
-                      </body>
                     </body>
                   </body>
                 </body>
@@ -133,12 +100,5 @@
     <motor name="joint_6_motor" joint="joint_6" gear="100" forcerange="-9 9" />
     <motor name="joint_7_motor" joint="joint_7" gear="100" forcerange="-9 9" />
   </actuator>
-
-  <sensor>
-    <force name="EEForceSensor_fsensor" site="ee_force" />
-    <torque name="EEForceSensor_tsensor" site="ee_force" />
-    <accelerometer name="Accelerometer_accelerometer" site="imu" />
-    <gyro name="Accelerometer_gyro" site="imu" /> 
-  </sensor>
 
 </mujoco>

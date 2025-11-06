@@ -28,6 +28,6 @@ macro(install_variants VARIANT)
 endmacro()
 
 install_variants(kinova)
-install_variants(kinova_default)
+install_variants(kinova_bota_ds4)
 install_variants(kinova_bota)
 install_variants(kinova_callib)
