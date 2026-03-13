@@ -29,5 +29,7 @@ endmacro()
 
 install_variants(kinova)
 install_variants(kinova_bota_ds4)
+install_variants(kinova_bota_plate)
+install_variants(kinova_bota_screw)
 install_variants(kinova_bota)
 install_variants(kinova_callib)
